@@ -1,0 +1,19 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: beige;
+  height: 400px;
+  width: 1000px;
+  overflow-y: auto;
+}
+h1 {
+  display: flex;
+  width: 1000px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: burlywood;
+  margin: auto;
+}
