@@ -1,4 +1,4 @@
-const $button = $("#submit");
+const $submit = $("#submit");
 const $task = $("#task");
 const $prio = $("#priority");
 const $high = $("#high");
@@ -33,7 +33,7 @@ $.get("/api/todolist", function (data) {
   }
 });
 //POST REQUEST
-$button.on("click", function () {
+$submit.on("click", function () {
   let newTask = {
     task_name: $task.val(),
     prio: $prio.val(),
