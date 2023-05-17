@@ -128,7 +128,7 @@ $(document).on("click", ".submit-button", function () {
 
 $(document).on("click", ".delete-button", function (event) {
   event.stopPropagation();
-  const taskId = $(this).parent().attr("id"); // Use $(this) instead of $(".delete-button")
+  const taskId = $(this).parent().attr("id");
 
   $.ajax({
     type: "DELETE",
