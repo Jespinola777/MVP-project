@@ -1,8 +1,8 @@
 {
   "type": "module",
-  "scripts":{
+  "scripts": {
     "dev": "node --watch express.js",
-    "start": "node server.js"
+    "start": "node express.js"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
