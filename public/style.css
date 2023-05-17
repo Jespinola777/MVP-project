@@ -13,10 +13,10 @@ body {
   margin-right: auto;
   margin-left: auto;
   background-color: beige;
-  height: 400px;
+  height: 28vh;
   width: 1000px;
   overflow-y: auto;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 .inputbox {
   margin-bottom: auto;
@@ -68,6 +68,7 @@ h1 {
   justify-content: center;
   height: 50px;
   margin-left: 10px;
+  margin-right: 25px;
   background: none;
   border: none;
   padding: 0;
