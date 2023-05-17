@@ -14,7 +14,7 @@ const db = new pg.Pool({
 app.use(express.static("public"));
 
 app.get("/api/todolist", (req, res) => {
-  db.query("SELECT * FROM todo").then((data) => {
+  db.query("SELECT * FROM todo ORDER BY id").then((data) => {
     res.send(data.rows);
   });
 });
@@ -52,6 +52,15 @@ app.patch("/api/todolist/:id", (req, res) => {
       res.send(result.rows[0]);
     }
   });
+});
+
+app.delete("/api/todolist/:id", (req, res) => {
+  const id = Number(req.params.id);
+  db.query("DELETE FROM todo WHERE id = $1 RETURNING *", [id]).then(
+    (result) => {
+      res.send(result);
+    }
+  );
 });
 
 app.listen(3000, () => {
